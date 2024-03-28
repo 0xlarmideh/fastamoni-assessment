@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Transition } from "@headlessui/react";
 
 import useTailwindBreakpoints from "../../../utils/useTailwindBreakpoints";
 
@@ -18,8 +19,19 @@ const Navbar = () => {
   return (
     <div className="relative">
       <DesktopNavbar toggleOpenState={toggleOpenState} />
-      {isOpen && !is_lg_and_Greater && (
-        <MobileNavbar toggleOpenState={toggleOpenState} />
+      {!is_lg_and_Greater && (
+        <Transition show={isOpen}>
+          <Transition.Child
+            enter="transition-opacity ease-linear duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity ease-linear duration-300"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <MobileNavbar toggleOpenState={toggleOpenState} />
+          </Transition.Child>
+        </Transition>
       )}
     </div>
   );
