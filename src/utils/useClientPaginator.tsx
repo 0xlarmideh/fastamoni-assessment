@@ -28,12 +28,20 @@ const useClientPaginator = ({
     else setCurrentPage((prev) => prev - 1);
   };
 
+  const returnToFirstPage = () => {
+    if (currentPage > totalPages || currentPage < 1) setCurrentPage(1);
+  };
+
   return {
     pagedData,
     handleNext,
     handlePrevious,
     isGreaterThanDataLength,
     isLessThanFirstPage,
+    setCurrentPage,
+    currentPage,
+    totalPages,
+    returnToFirstPage,
   };
 };
 
