@@ -1,57 +1,27 @@
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
-import { FiSearch } from "react-icons/fi";
+import { useEffect, useState } from "react";
 
-const Divider = () => <div className="h-full w-[1px] bg-white"></div>;
+import useTailwindBreakpoints from "../../../utils/useTailwindBreakpoints";
+
+import DesktopNavbar from "./DesktopNavbar";
+import MobileNavbar from "./MobileNavbar";
+
 const Navbar = () => {
-  const pageLinks = [
-    "HOME",
-    "SERVICES",
-    "PAGES",
-    "CASE SHOP",
-    "BLOG",
-    "CONTENT",
-  ];
+  const { is_lg_and_Greater } = useTailwindBreakpoints();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  // Close Drawer if window is resized and greater lg
+  useEffect(() => {
+    if (is_lg_and_Greater && isOpen) setIsOpen(false);
+  }, [is_lg_and_Greater, isOpen]);
+
+  const toggleOpenState = () => setIsOpen(!isOpen);
   return (
-    <nav className="bg-[#707070] p-0 h-[100px] border-b border-white flex justify-between items-center text-white px-4">
-      <div className="flex gap-4 h-full items-center">
-        <div>
-          <h3 className="text-2xl">LOGO</h3>
-        </div>
-        <Divider />
-
-        {/* PAGE LINKS */}
-        <div className="flex gap-6 items-center text-[20px]">
-          {pageLinks.map((link, idx) => (
-            <a
-              key={idx}
-              className="hover:underline transition-all hover:text-slate-300 duration-700"
-              href="#"
-            >
-              {link}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex gap-4 h-full items-center">
-        <div className="flex gap-4 text-2xl items-center">
-          <FaInstagram />
-          <FaLinkedin />
-          <FaTwitter />
-          <FaFacebook />
-        </div>
-        <Divider />
-        <div className="text-2xl">
-          <FiSearch />
-        </div>
-        <Divider />
-        <div className="text-[20px]">
-          <p>Need help?</p>
-          <p>+92 000 67 678</p>
-        </div>
-      </div>
-    </nav>
+    <div className="relative">
+      <DesktopNavbar toggleOpenState={toggleOpenState} />
+      {isOpen && !is_lg_and_Greater && (
+        <MobileNavbar toggleOpenState={toggleOpenState} />
+      )}
+    </div>
   );
 };
 
