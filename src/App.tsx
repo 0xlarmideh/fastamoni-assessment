@@ -1,9 +1,13 @@
 // import viteLogo from "/vite.svg";
 import "./App.css";
+import DiscoverMore from "./sections/DicoverMore";
+import Faq from "./sections/FAQ/Faq";
 import Header from "./sections/Header/Header";
 import Navbar from "./sections/Layout/Navbar";
 import NewCaseStudies from "./sections/NewCaseStudies";
+import NoOfProjects from "./sections/NoOfProjects";
 import RealWorldExperience from "./sections/RealWordExperience";
+import WhatTheyAreTalkingAbout from "./sections/WhatTheyAreTalkingAbout";
 
 function App() {
   return (
@@ -12,7 +16,10 @@ function App() {
       <Header />
       <RealWorldExperience />
       <NewCaseStudies />
-      <h5 className="bg-black text-white">hsd</h5>
+      <DiscoverMore />
+      <Faq />
+      <WhatTheyAreTalkingAbout />
+      <NoOfProjects />
     </div>
   );
 }
