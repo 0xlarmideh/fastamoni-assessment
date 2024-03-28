@@ -1609,6 +1609,13 @@ prelude-ls@^1.2.1:
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
+progress_bar_for_react@^1.0.60:
+  version "1.0.60"
+  resolved "https://registry.npmjs.org/progress_bar_for_react/-/progress_bar_for_react-1.0.60.tgz"
+  integrity sha512-WSJUHP5sgdc7SXJBDNNrl0AicDw+w6j2SGmMLrJgKkYD1UzfIZsqsYTyQpeLTy23gsg+Y00TtRA2kel3CRhAiw==
+  dependencies:
+    "@vitejs/plugin-react" "^4.2.1"
+
 punycode@^2.1.0:
   version "2.3.1"
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz"
