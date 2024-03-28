@@ -1,23 +1,37 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import useClientPaginator from "../../utils/useClientPaginator";
 import { testimonialsList } from "./data";
+import SectionWrapper from "../../components/SectionWrapper";
+import useTailwindBreakpoints from "../../utils/useTailwindBreakpoints";
+import { useEffect } from "react";
 
 const WhatTheyAreTalkingAbout = () => {
+  const { is_lg_and_Greater } = useTailwindBreakpoints();
+
   const {
     pagedData: pagedTestimonials,
     handleNext,
     handlePrevious,
     isGreaterThanDataLength,
     isLessThanFirstPage,
+    returnToFirstPage,
   } = useClientPaginator({
     data: testimonialsList,
-    perPage: 2,
+    perPage: is_lg_and_Greater ? 2 : 1,
   });
+
+  useEffect(() => {
+    returnToFirstPage();
+  }, [is_lg_and_Greater, returnToFirstPage]);
+
   const btnClassName = "bg-[#fff] rounded-full p-4 text-[#000]";
   return (
-    <section className="bg-[#F2F4F8] flex gap-6 text-black px-[6rem] py-[8rem] text-white">
-      <div className="w-[30%]">
-        <p className="text-[65px] font-bold leading-[100%] mb-4">
+    <SectionWrapper
+      bgColor="#F2F4F8"
+      extraClassName="flex flex-col md:flex-row gap-6 text-black"
+    >
+      <div className="w-full md:w-[40%]">
+        <p className="text-black text-[42px] md:text-[52px] lg:text-[60px] font-bold leading-[100%] mb-4">
           WHAT THEY ARE TALKING ABOUT?
         </p>
         <p className="text-[#726F84] text-[18px] mb-6">
@@ -42,7 +56,7 @@ const WhatTheyAreTalkingAbout = () => {
           </button>
         </div>
       </div>
-      <div className="w-[70%] grid grid-cols-2 gap-8">
+      <div className="w-full md:w-[60%] grid lg:grid-cols-2 gap-4">
         {pagedTestimonials.map((item, idx) => (
           <div key={idx} className="bg-white p-6 text-[#726F84]">
             <p className="text-[14px] mb-6 text-[18px] leading-[34px]">
@@ -57,7 +71,7 @@ const WhatTheyAreTalkingAbout = () => {
           </div>
         ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

@@ -1,9 +1,11 @@
+import SectionWrapper from "../../components/SectionWrapper";
+
 const Header = () => {
   return (
-    <div className="bg-[#707070] px-[6rem] pt-[8rem] pb-[12rem]">
+    <SectionWrapper bgColor="#707070">
       <div className="text-white flex flex-col gap-8">
         <p className="font-medium text-[20px]">WELCOME TO CODEKEEPER</p>
-        <p className="font-bold tracking-[-0.03px] text-[90px] leading-[100%]">
+        <p className="font-bold tracking-[-0.03px] text-[48px] md:text-[75px] lg:text-[90px] leading-[100%]">
           CONSULTING
           <br />
           FOR EVERY
@@ -16,7 +18,7 @@ const Header = () => {
           </button>
         </div>
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 
