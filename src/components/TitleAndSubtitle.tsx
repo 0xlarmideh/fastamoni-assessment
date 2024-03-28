@@ -9,7 +9,7 @@ const TitleAndSubtitle = ({
 }) => {
   return (
     <div className="text-center font-bold mb-[2rem]">
-      <p className="tracking-[-0.03px] uppercase mb-6 text-[50px] leading-[100%]">
+      <p className="tracking-[-0.03px] uppercase mb-2 md:mb-4 lg:mb-6 text-[40px] md:text-[50px] leading-[100%]">
         {title}
       </p>
       <p className={`text-[${subtitleColor}] text-[18px]`}>{subtitle}</p>
