@@ -14,10 +14,15 @@ const NoOfProjects = () => {
   const details = ["HIGHEST SUCCESS RATES", "WE BUILD EXPERIENCE"];
   return (
     <>
-      <SectionWrapper bgColor="!bg-[#07122d]" extraClassName="pb-[12rem]">
+      <SectionWrapper
+        removeOverflow={false}
+        bgColor="!bg-[#07122d]"
+        extraClassName="pb-[12rem]"
+      >
         <div className="relative gap-y-0 md:gap-y-4 grid grid-cols-2 md:grid-cols-4 ">
           {projects.map((item, idx) => (
-            <div data-aos="zoom-out"
+            <div
+              data-aos="fade-in"
               key={idx}
               className={`flex flex-col items-center text-white ${
                 idx < 2 &&
@@ -42,7 +47,7 @@ const NoOfProjects = () => {
               <p className="font-semibold uppercase text-[12px]">{item.name}</p>
             </div>
           ))}
-          <div data-aos="ease-out" className="grid md:grid-cols-3 absolute bottom-[-20rem] md:bottom-[-10rem] lg:bottom-[-18rem] px-[2rem] w-full left-0">
+          <div className="grid md:grid-cols-3 z-[1000] !absolute bottom-[-20rem] md:bottom-[-10rem] lg:bottom-[-18rem] px-[2rem] w-full left-0">
             {["Projects", "Management", "Solutions"].map((item, idx) => (
               <div
                 className="bg-[#F2F4F8] font-bold text-[20px] hover:text-[#3C72FC] hover:bg-white hover:shadow-lg hover:cursor-pointer uppercase transition-all duration-700 h-[80px] md:h-[120px] lg:h-[200px] flex justify-center items-center border shadow-sm"
@@ -55,9 +60,12 @@ const NoOfProjects = () => {
         </div>
       </SectionWrapper>
       <SectionWrapper extraClassName="pt-[12rem] pb-[4rem] bg-white grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="flex flex-col items-start gap-8 border-r-transparent lg:border-r  lg:border-[#E6E9EF]">
+        <div
+          data-aos="zoom-out"
+          className="flex flex-col items-start gap-8 border-r-transparent lg:border-r  lg:border-[#E6E9EF]"
+        >
           {details.map((detail, idx) => (
-            <div data-aos="zoom-out" key={idx} className="flex items-start gap-8">
+            <div key={idx} className="flex items-start gap-8">
               <div className="bg-[#EBF1FF] p-6">
                 <img
                   className="w-[33px] md:w-[60px]"
@@ -75,7 +83,7 @@ const NoOfProjects = () => {
             </div>
           ))}
         </div>
-        <div data-aos="slide-in" className="mt-8 md:mt-0">
+        <div data-aos="zoom-in" className="mt-8 md:mt-0">
           <p className="text-[#726F84] leading-[36px] text-[21px]">
             There are many variations of passages of lorem ipsum available, but
             the majority have suffered alteration in some form injected humour

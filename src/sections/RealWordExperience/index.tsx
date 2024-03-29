@@ -28,14 +28,14 @@ const RealWorldExperience = () => {
     isGreaterThanDataLength,
     isLessThanFirstPage,
     currentPage,
-    returnToFirstPage
+    returnToFirstPage,
   } = useClientPaginator({
     data: experiencesList,
     perPage: lg ? 3 : md ? 2 : 1,
   });
 
   useEffect(() => {
-    returnToFirstPage()
+    returnToFirstPage();
   }, [currentPage, returnToFirstPage]);
 
   const btnClassName =
@@ -47,7 +47,11 @@ const RealWorldExperience = () => {
         title="REAL-WORLD EXPERIENCE"
         subtitle="The best business consulting firm you can count on!"
       />
-      <div data-aos="fade-in" key={currentPage} className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-[2rem] md:mb-[4rem] lg:mb-[10rem]">
+      <div
+        data-aos="fade-in"
+        key={currentPage}
+        className="overflow-hidden grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-[2rem] md:mb-[4rem] lg:mb-[10rem]"
+      >
         {pagedExperiences.map((exp, idx) => (
           <div key={idx} className="p-16 bg-black relative">
             <p className="w-[60%] h-[80px] text-[24px] leading-[100%] tracking-[-0.03px] uppercase">
@@ -62,7 +66,10 @@ const RealWorldExperience = () => {
           </div>
         ))}
       </div>
-      <div data-aos="zoom-out" className="flex items-center gap-2 mb-[2rem] md:mb-[4rem] lg:mb-[8rem]">
+      <div
+        data-aos="zoom-out"
+        className="overflow-hidden flex items-center gap-2 mb-[2rem] md:mb-[4rem] lg:mb-[8rem]"
+      >
         <div className="w-full h-[1px] bg-white"></div>
         <div className="w-max">
           <p className="uppercase text-[16px] font-bold text-white whitespace-nowrap">

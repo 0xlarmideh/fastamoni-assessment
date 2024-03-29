@@ -1,8 +1,8 @@
 // import viteLogo from "/vite.svg";
 import { useEffect } from "react";
-import AOS from "aos"
+import AOS from "aos";
 
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 import "./App.css";
 
 import DiscoverMore from "./sections/DicoverMore";
@@ -16,16 +16,15 @@ import NoOfProjects from "./sections/NoOfProjects";
 import RealWorldExperience from "./sections/RealWordExperience";
 import WhatTheyAreTalkingAbout from "./sections/WhatTheyAreTalkingAbout";
 
-
 function App() {
   useEffect(() => {
     AOS.init({
       offset: 120,
       delay: 300,
       duration: 1500,
-      easing: "ease"
-    })
-  }, [])
+      easing: "ease",
+    });
+  }, []);
   return (
     <div>
       <Navbar />

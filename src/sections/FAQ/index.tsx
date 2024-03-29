@@ -18,7 +18,10 @@ const Faq = () => {
         title="QUESTION ANSWERS"
         subtitle="We help our clients renew their business"
       />
-      <div data-aos="zoom-out" className="grid lg:grid-cols-2 gap-6 pt-6 items-end">
+      <div
+        data-aos="zoom-out"
+        className="grid lg:grid-cols-2 gap-6 pt-6 items-end"
+      >
         <RenderedFaq />
         <div className="flex items-end gap-4 justify-between">
           <div className="flex flex-col gap-4">
