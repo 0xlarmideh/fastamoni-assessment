@@ -27,7 +27,7 @@ const WhatTheyAreTalkingAbout = () => {
     returnToFirstPage();
   }, [lg, returnToFirstPage]);
 
-  const btnClassName = "bg-[#fff] disabled:bg-slate-200 disabled:text-gray-400 button rounded-full p-4 text-[#000]";
+  const btnClassName = "bg-[#fff] button disabled:bg-slate-200 disabled:text-gray-400 button rounded-full p-4 text-[#000]";
   return (
     <SectionWrapper
       bgColor="!bg-[#F2F4F8]"
@@ -44,7 +44,7 @@ const WhatTheyAreTalkingAbout = () => {
           <button
             aria-disabled={isLessThanFirstPage}
             disabled={isLessThanFirstPage}
-            className={`${btnClassName} ${!isLessThanFirstPage && "button"}`}
+            className={btnClassName}
             onClick={handlePrevious}
           >
             <FaArrowLeft />
@@ -52,7 +52,7 @@ const WhatTheyAreTalkingAbout = () => {
           <button
             aria-disabled={isGreaterThanDataLength}
             disabled={isGreaterThanDataLength}
-            className={`${btnClassName} ${!isGreaterThanDataLength && "button"}`}
+            className={btnClassName}
             onClick={handleNext}
           >
             <FaArrowRight />
