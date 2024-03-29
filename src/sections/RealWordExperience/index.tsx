@@ -71,7 +71,7 @@ const RealWorldExperience = () => {
         </div>
         <div className="w-full h-[1px] bg-white"></div>
       </div>
-      <div data-aos="fade-up" className="flex justify-between items-center">
+      <div className="flex justify-between items-center">
         <button
           aria-disabled={isLessThanFirstPage}
           disabled={isLessThanFirstPage}
