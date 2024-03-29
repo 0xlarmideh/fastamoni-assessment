@@ -23,7 +23,7 @@ const Faq = () => {
         className="grid lg:grid-cols-2 gap-6 pt-6 items-end"
       >
         <RenderedFaq />
-        <div className="flex items-end gap-4 justify-between">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4 justify-between">
           <div className="flex flex-col gap-4">
             {rightTexts.map((item, idx) => (
               <div key={idx} className="flex gap-2 items-center text-[18px]">
