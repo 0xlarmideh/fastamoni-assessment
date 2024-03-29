@@ -15,7 +15,10 @@ const Navbar = () => {
     if (lg && isOpen) setIsOpen(false);
   }, [lg, isOpen]);
 
-  const toggleOpenState = () => setIsOpen(!isOpen);
+  const toggleOpenState = () => {
+    setIsOpen(!isOpen);
+    document.body.style.overflow = isOpen ? "auto" : "hidden"
+  }
   return (
     <div className="relative">
       <DesktopNavbar toggleOpenState={toggleOpenState} />
