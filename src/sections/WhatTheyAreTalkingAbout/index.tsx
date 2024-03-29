@@ -2,14 +2,14 @@ import { useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import useClientPaginator from "../../utils/useClientPaginator";
-import useTailwindBreakpoints from "../../utils/useTailwindBreakpoints";
+import useTailwindBreakpoints from "../../utils/useBreakpoints";
 
 import { testimonialsList } from "./data";
 
 import SectionWrapper from "../../components/SectionWrapper";
 
 const WhatTheyAreTalkingAbout = () => {
-  const { is_lg_and_Greater } = useTailwindBreakpoints();
+  const { lg } = useTailwindBreakpoints();
 
   const {
     pagedData: pagedTestimonials,
@@ -20,12 +20,12 @@ const WhatTheyAreTalkingAbout = () => {
     returnToFirstPage,
   } = useClientPaginator({
     data: testimonialsList,
-    perPage: is_lg_and_Greater ? 2 : 1,
+    perPage: lg ? 2 : 1,
   });
 
   useEffect(() => {
     returnToFirstPage();
-  }, [is_lg_and_Greater, returnToFirstPage]);
+  }, [lg, returnToFirstPage]);
 
   const btnClassName = "bg-[#fff] rounded-full p-4 text-[#000]";
   return (

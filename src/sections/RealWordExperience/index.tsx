@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import useClientPaginator from "../../utils/useClientPaginator";
-import useTailwindBreakpoints from "../../utils/useTailwindBreakpoints";
+import useTailwindBreakpoints from "../../utils/useBreakpoints";
 
 import iconBlue from "../../assets/icon-blue.png";
 import TitleAndSubtitle from "../../components/TitleAndSubtitle";
@@ -19,7 +19,7 @@ const experiencesList = [
 ];
 
 const RealWorldExperience = () => {
-  const { is_md, is_lg_and_Greater } = useTailwindBreakpoints();
+  const { md, lg } = useTailwindBreakpoints();
 
   const {
     pagedData: pagedExperiences,
@@ -31,7 +31,7 @@ const RealWorldExperience = () => {
     returnToFirstPage
   } = useClientPaginator({
     data: experiencesList,
-    perPage: is_lg_and_Greater ? 3 : is_md ? 2 : 1,
+    perPage: lg ? 3 : md ? 2 : 1,
   });
 
   useEffect(() => {
