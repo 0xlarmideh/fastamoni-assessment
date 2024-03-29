@@ -1,11 +1,12 @@
+import { useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import useClientPaginator from "../../utils/useClientPaginator";
+import useTailwindBreakpoints from "../../utils/useTailwindBreakpoints";
 
 import iconBlue from "../../assets/icon-blue.png";
 import TitleAndSubtitle from "../../components/TitleAndSubtitle";
-import useTailwindBreakpoints from "../../utils/useTailwindBreakpoints";
-import { useEffect } from "react";
+
 import SectionWrapper from "../../components/SectionWrapper";
 
 const experiencesList = [

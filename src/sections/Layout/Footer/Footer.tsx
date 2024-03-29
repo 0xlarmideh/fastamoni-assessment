@@ -1,8 +1,10 @@
+import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+
 import phone from "../../../assets/phone.png";
 import map from "../../../assets/map.png";
 import email from "../../../assets/email.png";
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
+
 import SectionWrapper from "../../../components/SectionWrapper";
 
 const Footer = () => {

@@ -1,9 +1,11 @@
+import { ProgressBarContainer as ProgressBar } from "progress_bar_for_react";
+
 import video from "../../assets/video.mp4";
 import phone2 from "../../assets/phone2.png";
-import { ProgressBarContainer as ProgressBar } from "progress_bar_for_react";
 import aivonText from "../../assets/AIVONS.png";
 import right from "../../assets/right.png";
 import left from "../../assets/left.png";
+
 import SectionWrapper from "../../components/SectionWrapper";
 
 const LeadingMarket = () => {

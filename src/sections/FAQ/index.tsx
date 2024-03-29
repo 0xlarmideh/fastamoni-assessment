@@ -1,4 +1,5 @@
 import { IoMdCheckmark } from "react-icons/io";
+
 import TitleAndSubtitle from "../../components/TitleAndSubtitle";
 import RenderedFaq from "./RenderedFaq";
 import SectionWrapper from "../../components/SectionWrapper";

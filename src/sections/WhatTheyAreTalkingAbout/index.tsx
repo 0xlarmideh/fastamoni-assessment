@@ -1,9 +1,12 @@
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import useClientPaginator from "../../utils/useClientPaginator";
-import { testimonialsList } from "./data";
-import SectionWrapper from "../../components/SectionWrapper";
-import useTailwindBreakpoints from "../../utils/useTailwindBreakpoints";
 import { useEffect } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+import useClientPaginator from "../../utils/useClientPaginator";
+import useTailwindBreakpoints from "../../utils/useTailwindBreakpoints";
+
+import { testimonialsList } from "./data";
+
+import SectionWrapper from "../../components/SectionWrapper";
 
 const WhatTheyAreTalkingAbout = () => {
   const { is_lg_and_Greater } = useTailwindBreakpoints();
