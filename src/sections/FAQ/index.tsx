@@ -32,7 +32,7 @@ const Faq = () => {
               </div>
             ))}
           </div>
-          <div className="font-bold flex flex-col justify-center items-center w-full sm:w-fit sm:block text-white text-center bg-[#3C72FC] px-8 py-6">
+          <div className="font-bold w-full sm:w-fit text-white text-center bg-[#3C72FC] px-8 py-6">
             <p className=" text-[70px] leading-[100%]">30</p>
             <p className="text-[18px]">
               Years of
