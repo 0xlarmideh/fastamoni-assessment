@@ -1,25 +1,25 @@
 import { useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
 
-import useTailwindBreakpoints from "../../../utils/useTailwindBreakpoints";
+import useTailwindBreakpoints from "../../../utils/useBreakpoints";
 
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {
-  const { is_lg_and_Greater } = useTailwindBreakpoints();
+  const { lg } = useTailwindBreakpoints();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   // Close Drawer if window is resized and greater lg
   useEffect(() => {
-    if (is_lg_and_Greater && isOpen) setIsOpen(false);
-  }, [is_lg_and_Greater, isOpen]);
+    if (lg && isOpen) setIsOpen(false);
+  }, [lg, isOpen]);
 
   const toggleOpenState = () => setIsOpen(!isOpen);
   return (
     <div className="relative">
       <DesktopNavbar toggleOpenState={toggleOpenState} />
-      {!is_lg_and_Greater && (
+      {!lg && (
         <Transition show={isOpen}>
           <Transition.Child
             enter="transition-opacity ease-linear duration-300"
