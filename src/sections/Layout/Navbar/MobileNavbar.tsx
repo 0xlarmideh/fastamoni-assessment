@@ -12,7 +12,7 @@ const MobileNavbar = ({ toggleOpenState }: { toggleOpenState: () => void }) => {
         </div>
         <button
           className={
-            "bg-slate-700 p-4 text-2xl border border-[#243979] text-[#fff]"
+            "bg-slate-700 button p-4 text-2xl border border-[#243979] text-[#fff]"
           }
           onClick={toggleOpenState}
         >

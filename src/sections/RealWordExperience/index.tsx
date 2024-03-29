@@ -39,7 +39,7 @@ const RealWorldExperience = () => {
   }, [currentPage, returnToFirstPage]);
 
   const btnClassName =
-    "bg-[#1a2041] disabled:bg-slate-500 p-4 text-2xl border border-[#243979] text-[#3c72fc]";
+    "bg-[#1a2041] disabled:bg-gray-500 disabled:text-gray-300 p-4 text-2xl border border-[#243979] text-[#3c72fc]";
 
   return (
     <SectionWrapper bgColor="!bg-[#0F0D1D]" extraClassName="text-white">
@@ -75,7 +75,7 @@ const RealWorldExperience = () => {
         <button
           aria-disabled={isLessThanFirstPage}
           disabled={isLessThanFirstPage}
-          className={btnClassName}
+          className={`${btnClassName} ${!isLessThanFirstPage && "button"}`}
           onClick={handlePrevious}
         >
           <FaArrowLeft />
@@ -83,7 +83,7 @@ const RealWorldExperience = () => {
         <button
           aria-disabled={isGreaterThanDataLength}
           disabled={isGreaterThanDataLength}
-          className={btnClassName}
+          className={`${btnClassName} ${!isGreaterThanDataLength && "button"}`}
           onClick={handleNext}
         >
           <FaArrowRight />
