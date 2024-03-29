@@ -50,7 +50,7 @@ const RealWorldExperience = () => {
       <div
         data-aos="fade-in"
         key={currentPage}
-        className="overflow-hidden grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-[2rem] md:mb-[4rem] lg:mb-[10rem]"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-[2rem] md:mb-[4rem] lg:mb-[10rem]"
       >
         {pagedExperiences.map((exp, idx) => (
           <div key={idx} className="p-16 bg-black relative">
@@ -68,7 +68,7 @@ const RealWorldExperience = () => {
       </div>
       <div
         data-aos="zoom-out"
-        className="overflow-hidden flex items-center gap-2 mb-[2rem] md:mb-[4rem] lg:mb-[8rem]"
+        className="flex items-center gap-2 mb-[2rem] md:mb-[4rem] lg:mb-[8rem]"
       >
         <div className="w-full h-[1px] bg-white"></div>
         <div className="w-max">

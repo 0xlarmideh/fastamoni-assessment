@@ -14,11 +14,7 @@ const NoOfProjects = () => {
   const details = ["HIGHEST SUCCESS RATES", "WE BUILD EXPERIENCE"];
   return (
     <>
-      <SectionWrapper
-        removeOverflow={false}
-        bgColor="!bg-[#07122d]"
-        extraClassName="pb-[12rem]"
-      >
+      <SectionWrapper bgColor="!bg-[#07122d]" extraClassName="pb-[12rem]">
         <div className="relative gap-y-0 md:gap-y-4 grid grid-cols-2 md:grid-cols-4 ">
           {projects.map((item, idx) => (
             <div

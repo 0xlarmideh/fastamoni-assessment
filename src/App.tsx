@@ -26,7 +26,7 @@ function App() {
     });
   }, []);
   return (
-    <div>
+    <div className="overflow-hidden ">
       <Navbar />
       <Header />
       <RealWorldExperience />
