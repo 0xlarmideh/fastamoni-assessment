@@ -19,7 +19,7 @@ const experiencesList = [
 ];
 
 const RealWorldExperience = () => {
-  const { is_sm, is_md, is_lg_and_Greater } = useTailwindBreakpoints();
+  const { is_md, is_lg_and_Greater } = useTailwindBreakpoints();
 
   const {
     pagedData: pagedExperiences,
@@ -27,17 +27,16 @@ const RealWorldExperience = () => {
     handlePrevious,
     isGreaterThanDataLength,
     isLessThanFirstPage,
-    setCurrentPage,
     currentPage,
-    totalPages,
+    returnToFirstPage
   } = useClientPaginator({
     data: experiencesList,
     perPage: is_lg_and_Greater ? 3 : is_md ? 2 : 1,
   });
 
   useEffect(() => {
-    if (currentPage > totalPages || currentPage < 1) setCurrentPage(1);
-  }, [is_sm, is_md, currentPage, totalPages, setCurrentPage]);
+    returnToFirstPage()
+  }, [currentPage, returnToFirstPage]);
 
   const btnClassName =
     "bg-[#1a2041] disabled:bg-slate-500 p-4 text-2xl border border-[#243979] text-[#3c72fc]";
@@ -48,7 +47,7 @@ const RealWorldExperience = () => {
         title="REAL-WORLD EXPERIENCE"
         subtitle="The best business consulting firm you can count on!"
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-[2rem] md:mb-[4rem] lg:mb-[10rem]">
+      <div key={currentPage} className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-[2rem] md:mb-[4rem] lg:mb-[10rem]">
         {pagedExperiences.map((exp, idx) => (
           <div key={idx} className="p-16 bg-black relative">
             <p className="w-[60%] h-[80px] text-[24px] leading-[100%] tracking-[-0.03px] uppercase">

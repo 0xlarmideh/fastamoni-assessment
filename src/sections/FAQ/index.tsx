@@ -22,8 +22,8 @@ const Faq = () => {
         <RenderedFaq />
         <div className="flex items-end gap-4 justify-between">
           <div className="flex flex-col gap-4">
-            {rightTexts.map((item) => (
-              <div className="flex gap-2 items-center text-[18px]">
+            {rightTexts.map((item, idx) => (
+              <div key={idx} className="flex gap-2 items-center text-[18px]">
                 <IoMdCheckmark className="text-[#2D95FD]" />
                 <p className="text-[#726f84]">{item}</p>
               </div>

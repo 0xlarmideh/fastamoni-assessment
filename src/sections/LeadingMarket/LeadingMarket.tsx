@@ -100,7 +100,7 @@ const LeadingMarket = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-2 mb-[-4.5rem]">
           {processList.map((process, idx) => (
-            <div className="bg-white shadow-lg p-6 rounded-md w-full">
+            <div key={idx} className="bg-white shadow-lg p-6 rounded-md w-full">
               <div className="flex items-start gap-4 mt-4">
                 <p className="bg-[#EBF1FF] text-[#3C72FC] px-4 py-2 font-bold">
                   0{idx + 1}
