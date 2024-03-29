@@ -33,7 +33,7 @@ const WhatTheyAreTalkingAbout = () => {
       bgColor="!bg-[#F2F4F8]"
       extraClassName="flex flex-col md:flex-row gap-6 text-black"
     >
-      <div className="w-full md:w-[40%]">
+      <div data-aos="slide-right" className="w-full md:w-[40%]">
         <p className="text-black text-[42px] md:text-[52px] lg:text-[60px] font-bold leading-[100%] mb-4">
           WHAT THEY ARE TALKING ABOUT?
         </p>
@@ -59,7 +59,7 @@ const WhatTheyAreTalkingAbout = () => {
           </button>
         </div>
       </div>
-      <div className="w-full md:w-[60%] grid lg:grid-cols-2 gap-4">
+      <div data-aos="slide-left" className="w-full md:w-[60%] grid lg:grid-cols-2 gap-4">
         {pagedTestimonials.map((item, idx) => (
           <div key={idx} className="bg-white p-6 text-[#726F84]">
             <p className="text-[14px] mb-6 text-[18px] leading-[34px]">

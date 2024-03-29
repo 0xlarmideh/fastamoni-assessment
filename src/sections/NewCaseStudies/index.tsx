@@ -20,7 +20,7 @@ const NewCaseStudies = () => {
         subtitle="We help our clients renew their business!"
         subtitleColor="#726F84"
       />
-      <div className="grid md:grid-cols-3 gap-2 md:gap-4 lg:gap-8 mt-[3rem]">
+      <div data-aos="zoom-out" className="grid md:grid-cols-3 gap-2 md:gap-4 lg:gap-8 mt-[3rem]">
         {caseStudiesList.map((item, idx) => (
           <div
             key={idx}

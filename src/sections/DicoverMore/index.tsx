@@ -1,7 +1,7 @@
 const DiscoverMore = () => {
   return (
     <section className=" bg-[#4b4955] text-white flex justify-center ">
-      <div className="px-[1.5rem] md:px-[4rem] lg:px-[6rem] py-20 ">
+      <div data-aos="zoom-out" className="px-[1.5rem] md:px-[4rem] lg:px-[6rem] py-20 ">
         <p className="text-center leading-[100%] font-bold tracking-[-0.02px] text-[36px] md:text-[48px] lg:text-[60px] mb-[2rem]">
           MISSION IS TO PROTECT <br />
           YOUR BUSINESSES &<br />
