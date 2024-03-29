@@ -28,7 +28,7 @@ const LeadingMarket = () => {
   ];
   return (
     <SectionWrapper extraClassName="relative">
-      <div>
+      <div data-aos="zoom-out">
         <div className="absolute bottom-[0rem] left-[0rem]">
           <img src={left} alt="phone" className="h-[170px]" />
         </div>
