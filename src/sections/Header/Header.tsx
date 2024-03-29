@@ -2,7 +2,7 @@ import SectionWrapper from "../../components/SectionWrapper";
 
 const Header = () => {
   return (
-    <SectionWrapper bgColor="#707070">
+    <SectionWrapper bgColor="!bg-[#707070]">
       <div className="text-white flex flex-col gap-8">
         <p className="font-medium text-[20px]">WELCOME TO CODEKEEPER</p>
         <p className="font-bold tracking-[-0.03px] text-[48px] md:text-[75px] lg:text-[90px] leading-[100%]">

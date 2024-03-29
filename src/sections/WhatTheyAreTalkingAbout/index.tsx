@@ -30,7 +30,7 @@ const WhatTheyAreTalkingAbout = () => {
   const btnClassName = "bg-[#fff] rounded-full p-4 text-[#000]";
   return (
     <SectionWrapper
-      bgColor="#F2F4F8"
+      bgColor="!bg-[#F2F4F8]"
       extraClassName="flex flex-col md:flex-row gap-6 text-black"
     >
       <div className="w-full md:w-[40%]">

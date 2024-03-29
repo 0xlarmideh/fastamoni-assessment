@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 const SectionWrapper = ({
   extraClassName,
-  bgColor,
+  bgColor = "bg-white",
   children,
 }: {
   extraClassName?: string;
@@ -10,7 +10,7 @@ const SectionWrapper = ({
   children: ReactNode;
 }) => {
   return (
-    <section className={`w-full bg-[${bgColor}]`}>
+    <section className={`w-full ${bgColor}`}>
       <div
         className={`px-[1.5rem] py-[4rem] md:px-[4rem] md:py-[6rem] lg:px-[6rem] lg:pt-[8rem] lg:pb-[12rem] mx-auto max-w-7xl ${extraClassName}`}
       >

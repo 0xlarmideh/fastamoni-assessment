@@ -12,7 +12,7 @@ const caseStudiesList = [
 const NewCaseStudies = () => {
   return (
     <SectionWrapper
-      bgColor="#F2F4F8"
+      bgColor="!bg-[#F2F4F8]"
       extraClassName="lg:pt-[12rem] lg:pb-[8rem]"
     >
       <TitleAndSubtitle

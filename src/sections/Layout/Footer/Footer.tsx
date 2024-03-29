@@ -23,7 +23,7 @@ const Footer = () => {
   ];
   const details2 = ["Support", "Terms of Use", "Privacy & Policy", "Help"];
   return (
-    <SectionWrapper bgColor="#000" extraClassName=" text-[#8F8DA0]">
+    <SectionWrapper bgColor="!bg-[#000]" extraClassName=" text-[#8F8DA0]">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 border-b border-[#393737] pb-[4rem] ">
         {/* CreativeLogo section */}
         <div>
