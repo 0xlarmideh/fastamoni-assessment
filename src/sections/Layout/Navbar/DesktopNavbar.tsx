@@ -52,7 +52,7 @@ const DesktopNavbar = ({
       </div>
       <button
         className={
-          "lg:hidden bg-slate-700 p-4 text-2xl border border-[#243979] text-[#fff]"
+          "lg:hidden button bg-slate-700 p-4 text-2xl border border-[#243979] text-[#fff]"
         }
         onClick={toggleOpenState}
       >
